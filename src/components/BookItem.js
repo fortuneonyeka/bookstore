@@ -1,8 +1,8 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import PropTypes from "prop-types";
-import { bindActionCreators } from "redux";
-import { removeBook } from "../redux/books/books";
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
+import { bindActionCreators } from 'redux';
+import { removeBook } from '../redux/books/books';
 
 function BookItem({ title, author, bookId }) {
   const dispatch = useDispatch();
@@ -10,7 +10,10 @@ function BookItem({ title, author, bookId }) {
   return (
     <>
       <span>
-        {title} by {author}
+        {title}
+        {' '}
+        by
+        {author}
       </span>
       <button type="button" onClick={() => removeBookAction(bookId)}>
         Remove Book

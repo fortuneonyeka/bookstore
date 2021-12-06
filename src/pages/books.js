@@ -1,8 +1,8 @@
-import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { bindActionCreators } from "redux";
-import { loadBooks, createBook } from "../redux/books/books";
-import BookItem from "../components/BookItem";
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { loadBooks, createBook } from '../redux/books/books';
+import BookItem from '../components/BookItem';
 
 const Books = () => {
   const books = useSelector((state) => state.books);
@@ -16,8 +16,8 @@ const Books = () => {
   }, []);
 
   const newBook = {
-    author: "Giovanni Boccaccio",
-    title: "The Decameron",
+    author: 'Giovanni Boccaccio',
+    title: 'The Decameron',
   };
 
   return (

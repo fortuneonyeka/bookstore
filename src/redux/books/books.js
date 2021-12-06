@@ -1,11 +1,11 @@
-import { v4 as uuidv4 } from "uuid";
-import initialStateBooks from "./initialbookstate";
+import { v4 as uuidv4 } from 'uuid';
+import initialStateBooks from './initialbookstate';
 
 // Actions
-const LOAD = "bookstore/books/LOAD";
-const CREATE = "bookstore/books/CREATE";
-const UPDATE = "bookstore/books/UPDATE";
-const REMOVE = "bookstore/books/REMOVE";
+const LOAD = 'bookstore/books/LOAD';
+const CREATE = 'bookstore/books/CREATE';
+const UPDATE = 'bookstore/books/UPDATE';
+const REMOVE = 'bookstore/books/REMOVE';
 
 // Reducer
 export default function reducer(state = initialStateBooks, action) {
