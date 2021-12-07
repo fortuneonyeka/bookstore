@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import initialStateBooks from './initialbookstate';
+import initialBookState from './initialbookstate';
 
 // Actions
 const LOAD = 'bookstore/books/LOAD';
@@ -8,7 +8,7 @@ const UPDATE = 'bookstore/books/UPDATE';
 const REMOVE = 'bookstore/books/REMOVE';
 
 // Reducer
-export default function reducer(state = initialStateBooks, action) {
+export default function reducer(state = initialBookState, action) {
   let newBook;
   switch (action.type) {
     case LOAD:
