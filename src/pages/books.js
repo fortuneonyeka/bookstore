@@ -19,7 +19,7 @@ const Books = () => {
     <>
       <ul>
         {Object.keys(books).map((id) => (
-          <li key={books.id}>
+          <li key={id}>
             <BookItem
               title={books[id][0].title}
               category={books[id][0].category}
