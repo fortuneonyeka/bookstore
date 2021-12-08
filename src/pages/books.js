@@ -18,12 +18,12 @@ const Books = () => {
   return (
     <>
       <ul>
-        {books.map((book) => (
-          <li key={book.id}>
+        {Object.keys(books).map((id) => (
+          <li key={books.id}>
             <BookItem
-              title={book.bookTitle}
-              author={book.bookAuthor}
-              bookId={book.id}
+              title={books[id][0].title}
+              category={books[id][0].category}
+              bookId={id}
             />
           </li>
         ))}
