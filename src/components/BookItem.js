@@ -11,9 +11,9 @@ function BookItem({ title, author, bookId }) {
     <>
       <span>
         {title}
-        {' '}
-        by
+        {' Ant Hills Of The Savanah'}
         {author}
+        Chnue Achebe
       </span>
       <button type="button" onClick={() => removeBookAction(bookId)}>
         Remove Book

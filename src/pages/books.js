@@ -1,24 +1,19 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { loadBooks, createBook } from '../redux/books/books';
+import { loadBooks } from '../redux/books/books';
 import BookItem from '../components/BookItem';
+import AddBookForm from '../components/AddBookForm';
 
 const Books = () => {
   const books = useSelector((state) => state.books);
   const dispatch = useDispatch();
   const loadBooksAction = bindActionCreators(loadBooks, dispatch);
-  const createBookAction = bindActionCreators(createBook, dispatch);
 
   useEffect(() => {
     loadBooksAction();
     return null;
   }, []);
-
-  const newBook = {
-    author: 'Giovanni Boccaccio',
-    title: 'The Decameron',
-  };
 
   return (
     <>
@@ -26,30 +21,14 @@ const Books = () => {
         {books.map((book) => (
           <li key={book.id}>
             <BookItem
-              title={book.title}
-              author={book.author}
+              title={book.bookTitle}
+              author={book.bookAuthor}
               bookId={book.id}
             />
           </li>
         ))}
       </ul>
-      <form>
-        <input type="text" name="bookTitle" placeholder="Add a title..." />
-        <input
-          type="text"
-          name="bookAuthor"
-          placeholder="Add an author name..."
-        />
-        <button
-          type="submit"
-          onClick={(e) => {
-            e.preventDefault();
-            createBookAction(newBook);
-          }}
-        >
-          Submit
-        </button>
-      </form>
+      <AddBookForm />
     </>
   );
 };
