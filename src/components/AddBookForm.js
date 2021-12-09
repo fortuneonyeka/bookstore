@@ -6,25 +6,41 @@ import { createBook } from '../redux/books/books';
 function AddBookForm() {
   const dispatch = useDispatch();
   const createBookAction = bindActionCreators(createBook, dispatch);
-  const [bookTitle, setBookTitle] = useState('');
-  const [bookAuthor, setBookAuthor] = useState('');
-  const updateBookTitle = (e) => setBookTitle(e.target.value);
-  const updateBookAuthor = (e) => setBookAuthor(e.target.value);
+
+  const [title, setTitle] = useState('');
+  const [category, setCategory] = useState('');
+
+  const updateTitle = (e) => setTitle(e.target.value);
+  const updateCategory = (e) => setCategory(e.target.value);
+
   const addNewBook = (e) => {
     e.preventDefault();
-    if (bookTitle && bookAuthor) {
+    if (title && category) {
       createBookAction({
-        bookTitle,
-        bookAuthor,
+        title,
+        category,
       });
-      setBookTitle('');
-      setBookAuthor('');
+      setTitle('');
+      setCategory('');
     }
   };
+
   return (
     <form onSubmit={addNewBook}>
-      <input type="text" name="bookTitle" placeholder="Add book title..." onChange={updateBookTitle} value={bookTitle} />
-      <input type="text" name="bookAuthor" placeholder="Add a book author..." onChange={updateBookAuthor} value={bookAuthor} />
+      <input
+        type="text"
+        name="title"
+        placeholder="Add a book title..."
+        onChange={updateTitle}
+        value={title}
+      />
+      <input
+        type="text"
+        name="category"
+        placeholder="Add a book Category..."
+        onChange={updateCategory}
+        value={category}
+      />
       <button type="submit">Submit</button>
     </form>
   );

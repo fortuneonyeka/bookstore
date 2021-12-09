@@ -4,19 +4,23 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { removeBook } from '../redux/books/books';
 
-function BookItem({ title, author, bookId }) {
+function BookItem({ title, category, bookId }) {
   const dispatch = useDispatch();
   const removeBookAction = bindActionCreators(removeBook, dispatch);
   return (
     <>
       <span>
+        Title:
         {title}
-        {' Ant Hills Of The Savanah'}
-        {author}
-        Chnue Achebe
       </span>
+      <br />
+      <span>
+        Category:
+        {category}
+      </span>
+      <br />
       <button type="button" onClick={() => removeBookAction(bookId)}>
-        Remove Book
+        Remove
       </button>
     </>
   );
@@ -24,8 +28,8 @@ function BookItem({ title, author, bookId }) {
 
 BookItem.propTypes = {
   title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  bookId: PropTypes.number.isRequired,
+  category: PropTypes.string.isRequired,
+  bookId: PropTypes.string.isRequired,
 };
 
 export default BookItem;
