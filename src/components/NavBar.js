@@ -18,14 +18,14 @@ const NavBar = () => {
   return (
     <header className="flex align-items-center space-between">
       <nav className="panel-bg flex align-items-center">
-        <h1 className="Text-Style-5 width-15">Bookstore CMS</h1>
+        <h1 className="Text-Style-5">Bookstore CMS</h1>
         <ul className="nav-menu-list flex">
           {links.map((link) => (
             <li key={link.id}>
               <NavLink
                 to={link.path}
                 className="Text-Style-7"
-                activeclassname="active-link"
+                activeClassName="active-link"
               >
                 {link.text}
               </NavLink>

@@ -1,45 +1,6 @@
-/* @font-face {
-  font-family:
-  src:
-    local(montserrat-regular),
-    url(./fonts/Montserrat-Regular.ttf) format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-}
 
-@font-face {
-  font-family: Montserrat;
-  src:
-    local(montserrat-bold),
-    url(./fonts/Montserrat-Bold.ttf) format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-}
-
-@font-face {
-  font-family: ProximaNova;
-  src:
-    local(proximanova-regular),
-    url(./fonts/ProximaNova-Regular.ttf) format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-}
-
-@font-face {
-  font-family: RobotoSlab;
-  src:
-    local(robotoslab-bold),
-    url(./fonts/roboto-slab-bold.ttf) format("truetype");
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-} */
 
 :root {
-  /* --bubble-gum-pink: #ff5ab7; */
   --pinkish-grey: #c4c4c4;
   --black: #000;
   --black-5: rgba(0, 0, 0, 0.05);
@@ -59,18 +20,12 @@
   line-height: normal;
   letter-spacing: normal;
   color: var(--deeksky);
-}
-
-.Text-Style {
-  font-family: ProximaNova, sans-serif;
-  font-size: 1.063rem;
-  letter-spacing: normal;
-  color: #6782a4;
+  min-width: 15rem;
 }
 
 .Text-Style-7 {
   font-family: sans-serif;
-  font-size: 0.813rem;
+  font-size: 1.04rem;
   letter-spacing: 1.9px;
   color: #121212;
   opacity: 0.5;
@@ -83,10 +38,6 @@
   padding: 1.438rem 6.188rem 1.688rem 6.25rem;
   background-color: #fff;
 }
-
-/* .panel-bg:hover {
-  border:solid 1px blue;
-} */
 
 .flex {
   display: flex;
@@ -115,10 +66,6 @@
 
 .active-link {
   opacity: 1;
-}
-
-.width-15 {
-  min-width: 15rem;
 }
 
 .profile-image-cover {
@@ -186,7 +133,7 @@
   color: #121212;
 }
 
-.title {
+.pageTitle {
   margin: 0.188rem 0 0 0;
   font-family: RobotoSlab, sans-serif;
   font-size: 1.375rem;
@@ -338,6 +285,10 @@
   flex-grow: 4;
 }
 
+.book-title-input:hover {
+  border: 1px solid blue;
+}
+
 .book-category-input {
   margin: 0 5px;
   padding: 1rem;
@@ -345,6 +296,10 @@
   border: solid 1px var(--white);
   background-color: #fff;
   flex-grow: 1;
+}
+
+.book-category-input:hover {
+  border: 1px solid blue;
 }
 
 .submit-button {
@@ -364,4 +319,6 @@
 
 .submit-button:hover {
   cursor: pointer;
+  border-radius:15%;
+  background-color:rgb(88, 129, 27);
 }

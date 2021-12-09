@@ -12,7 +12,7 @@ function BookItem({ title, category, bookId }) {
       <div className="book-item-panel-1">
         <div className="flex flex-dir-col">
           <span className="category">{category}</span>
-          <span className="title">{title}</span>
+          <span className="pageTitle">{title}</span>
           <span className="author-name">Author&apos;s Name</span>
           <ul className="flex nav-menu-list ul-comments-remove-edit">
             <li>
