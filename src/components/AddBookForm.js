@@ -26,23 +26,30 @@ function AddBookForm() {
   };
 
   return (
-    <form onSubmit={addNewBook}>
-      <input
-        type="text"
-        name="title"
-        placeholder="Add a book title..."
-        onChange={updateTitle}
-        value={title}
-      />
-      <input
-        type="text"
-        name="category"
-        placeholder="Add a book Category..."
-        onChange={updateCategory}
-        value={category}
-      />
-      <button type="submit">Submit</button>
-    </form>
+    <div className="form-container">
+      <h2 className="form-header">ADD NEW BOOK</h2>
+      <form className="form flex" onSubmit={addNewBook}>
+        <input
+          type="text"
+          className="book-title-input"
+          name="title"
+          placeholder="Add a book title..."
+          onChange={updateTitle}
+          value={title}
+        />
+        <input
+          type="text"
+          className="book-category-input"
+          name="category"
+          placeholder="Add a book Category..."
+          onChange={updateCategory}
+          value={category}
+        />
+        <button type="submit" className="submit-button">
+          ADD BOOK
+        </button>
+      </form>
+    </div>
   );
 }
 
