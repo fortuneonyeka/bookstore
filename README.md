@@ -1,9 +1,8 @@
 # Bookstore
 "Bookstore" is a website for storing of books with their author's details.
 
-![Screenshot](./images/AddBook-form.png)
-![Screenshot](./images/booklist.png)
-![Screenshot](./images/cathegories.png)
+![Screenshot](./images/bookstore-styled.png)
+
 
 
 ## Built With

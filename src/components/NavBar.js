@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import userIcon from '../styles/img/user-icon.svg';
 
 const NavBar = () => {
   const links = [
@@ -15,18 +16,27 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="nav">
-      <h1 className="nav-title">Bookstore CMS</h1>
-      <ul className="nav-menu-list">
-        {links.map((link) => (
-          <li key={link.id}>
-            <NavLink to={link.path} activeclassname="active-link">
-              {link.text}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <header className="flex align-items-center space-between">
+      <nav className="panel-bg flex align-items-center">
+        <h1 className="Text-Style-5">Bookstore CMS</h1>
+        <ul className="nav-menu-list flex">
+          {links.map((link) => (
+            <li key={link.id}>
+              <NavLink
+                to={link.path}
+                className="Text-Style-7"
+                activeClassName="active-link"
+              >
+                {link.text}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <div className="profile-image-cover">
+        <img src={userIcon} alt="" className="profile-image" />
+      </div>
+    </header>
   );
 };
 
